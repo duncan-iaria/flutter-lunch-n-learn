@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './theme.dart';
+import './constants.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,6 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      theme: theme,
       home: Home(),
     );
   }
@@ -16,6 +19,9 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Pizza Time"),
+      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(64.0),
@@ -31,7 +37,7 @@ class Home extends StatelessWidget {
                   "Welcome to Lunch",
                   style: TextStyle(
                     fontSize: 24.0,
-                    color: Colors.deepPurpleAccent,
+                    color: kMainColor,
                   ),
                 ),
               ],
