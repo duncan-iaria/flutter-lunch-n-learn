@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import './theme.dart';
 import './constants.dart';
+import './router.dart';
+
+import './components/pizza_drawer.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,6 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: theme,
       home: Home(),
+      routes: pizzaRoutes,
     );
   }
 }
@@ -25,6 +29,7 @@ class Home extends StatelessWidget {
           style: Theme.of(context).textTheme.title,
         ),
       ),
+      drawer: PizzaDrawer(),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(64.0),
