@@ -20,7 +20,10 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Pizza Time"),
+        title: Text(
+          "Pizza Time",
+          style: Theme.of(context).textTheme.title,
+        ),
       ),
       body: Center(
         child: Padding(
