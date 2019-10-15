@@ -10,7 +10,7 @@ class PizzaDrawer extends StatelessWidget {
             MaterialButton(
               child: Text('Pizza Counter'),
               onPressed: () {
-                Navigator.of(context).pushNamed("/pizza");
+                Navigator.of(context).popAndPushNamed("/pizza");
               },
             ),
             MaterialButton(
